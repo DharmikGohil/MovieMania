@@ -1,0 +1,75 @@
+<% include head %>
+</head>
+<body>
+	<% include navbar %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<h1 class="single-movie-title">
+					<%= movie.title %>
+				</h1>
+				<h4>Genres: 
+					<% movie.genres.forEach((genres)=>{ %>
+						<h10><%= genres %>, </h10>
+						<% }) %>
+				</h4>
+				
+				<h3 class="single-movie-title">
+					<%= movie.tagline %>
+				</h3>
+				
+				<div class="col-md-6 col-sm-4 poster">
+					<a href=""><img src="<%= movie.poster_path %>"/></a>
+				</div>
+				
+				</br>
+				<p class="overview-header">Movie Synopsis: <span class="single-movie-overview">
+					<%= movie.overview %>
+				</span></p>
+				
+				</br>
+				<p class="overview-header">Casts: <span class="single-movie-overview">
+					<% movie.cast.forEach((cast)=>{ %>
+						<h10><%= cast %>, </h10>
+						<% }) %>
+				</span></p>
+			</div>
+		</div>
+	</div>
+
+<!-- Button trigger modal -->
+<div class="col-sm-12 text-center">
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		More Details
+	</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Movie Information</h4>
+      </div>
+      <div class="modal-body">
+				<p>Budget: <%= movie.budget %></p>
+				<p>Revenue: <%= movie.revenue %></p>
+				<p>Release Date: <%= movie.release_date%></p>
+				<p>Production Companies</p>
+				<ul>
+					<% movie.production_companies.forEach((company)=>{ %>
+						<li><%= company %></li>
+					<% }) %>
+				</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% include footer %>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="/images/movieIcon.jpeg">
+	<title>	Movie Mania </title>
+	<% include head %>
+</head>
+<body>
+
+	<% include navbar %>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h1>Explore Latest Movies!</h1>
+			</div>
+			<div class="col-sm-12">
+					<% movieData.forEach((movie) => {%>
+						<div class="col-md-3 col-sm-4 poster">
+							<a href="/movies/<%= movie._id %>"><img src="<%= movie.poster_path%>" alt="<%= movie.title %>"></a>
+							<h2><%= movie.title %></h2>
+							<p><%= movie.description %></p>
+						</div>
+					<%})%>	
+					
+			</div>
+		</div>
+	</div>
+	<% include footer %>
+</body>
+</html>

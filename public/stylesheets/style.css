@@ -1,0 +1,111 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-right {
+  margin-right: 10px;
+}
+
+.poster {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.poster img {
+  width: 100%; 
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; 
+}
+
+.poster:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.poster:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Title styling for better visibility */
+.poster h2 {
+  font-size: 18px; 
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Description styling */
+.poster p {
+  font-size: 14px; 
+  color: #777; 
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 18px; 
+  margin: 10px 0; 
+}
+
+p {
+  font-size: 14px; 
+  color: #555; 
+}
+
+#search-form input {
+  margin: 8px 0px;
+  padding: 5px;
+}
+
+.form-group select {
+  min-width: 150px;
+}
+
+.single-movie-title, .overview-header {
+  font-family: 'Metamorphous', cursive;
+}
+
+.overview-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.single-movie-overview {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* New styles for aligning the navbar brand */
+.navbar-brand {
+  display: flex;
+  align-items: center; 
+}
+
+.navbar-brand img {
+  border-radius: 7px;
+  width: 40px; 
+  height: 40px; 
+  margin-right: 10px; 
+  vertical-align: middle;
+}
+
+.navbar-brand span {
+  color: black;
+  font-weight: 100;
+  font-size: 25px;
+  vertical-align: middle;
+}
